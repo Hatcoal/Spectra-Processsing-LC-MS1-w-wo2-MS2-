@@ -1,0 +1,604 @@
+
+R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> library(OptiLCMS);
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: BiocParallel
+Loading required package: MSnbase
+Loading required package: mzR
+Loading required package: Rcpp
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: ProtGenerics
+
+Attaching package: ‘ProtGenerics’
+
+The following object is masked from ‘package:stats’:
+
+    smooth
+
+
+This is MSnbase version 2.24.2 
+  Visit https://lgatto.github.io/MSnbase/ to get started.
+
+
+Attaching package: ‘MSnbase’
+
+The following object is masked from ‘package:base’:
+
+    trimws
+
+OptiLCMS 1.1.0 initialized Successfully !
+
+> metaboanalyst_env <- new.env();
+> setwd('/data/glassfish/projects/metaboanalyst/guest4421321519057584299tmp');
+> mSet <- InitDataObjects('spec', 'raw', FALSE);
+OptiLCMS R objects initialized ...
+
+> mSet <- UpdateRawfiles(mSet,c('SERUM02.mzML','SERUM04.mzML','SERUM01.mzML','SERUM03.mzML','SERUM05.mzML','SERUM06.mzML','PLASMA03.mzML','PLASMA07.mzML','PLASMA01.mzML','PLASMA05.mzML','PLASMA02.mzML','PLASMA06.mzML','WB05.mzML','WB03.mzML','WB02.mzML','WB06.mzML','WB04.mzML','WB01.mzML','QCDDA_SCAN3_01.mzML','QCDDA_SCAN2_01.mzML','QCDDA_SCAN1_01.mzML','QCDDA_SCAN2_02.mzML','QCDDA_SCAN1_02.mzML','QCDDA_SCAN3_02.mzML','QC5.mzML','QC3.mzML','QC4.mzML','QC6.mzML','QC2.mzML','QC1.mzML'));
+SERUM02.mzMLSERUM04.mzMLSERUM01.mzMLSERUM03.mzMLSERUM05.mzMLSERUM06.mzMLPLASMA03.mzMLPLASMA07.mzMLPLASMA01.mzMLPLASMA05.mzMLPLASMA02.mzMLPLASMA06.mzMLWB05.mzMLWB03.mzMLWB02.mzMLWB06.mzMLWB04.mzMLWB01.mzMLQCDDA_SCAN3_01.mzMLQCDDA_SCAN2_01.mzMLQCDDA_SCAN1_01.mzMLQCDDA_SCAN2_02.mzMLQCDDA_SCAN1_02.mzMLQCDDA_SCAN3_02.mzMLQC5.mzMLQC3.mzMLQC4.mzMLQC6.mzMLQC2.mzMLQC1.mzML will be included for further processing !
+
+> plan <- InitializaPlan('raw_opt');
+> plan <- running.plan(plan,
++ data_folder_QC <- 'upload/QC/',
++ mSet <- PerformROIExtraction(data_folder_QC, rt.idx = 0.9, plot = F, running.controller=rc),
++ param_initial <- SetPeakParam(),
++ best_parameters <- PerformParamsOptimization(mSet, param = param_initial, ncore = 4,running.controller=rc),
++ data_folder_Sample <- 'upload/',
++ plotSettings1 <- SetPlotParam(Plot=TRUE),
++ param <- best_parameters,
++ mSet <- ImportRawMSData(path = data_folder_Sample,plotSettings = plotSettings1,running.controller=rc),
++ mSet <- PerformPeakProfiling(mSet, Params = param, plotSettings = plotSettings1,running.controller=rc),
++ annParams <- SetAnnotationParam(polarity = 'negative', mz_abs_add = 0.015),
++ mSet <- PerformPeakAnnotation(mSet, annParams,running.controller=rc),
++ mSet <- FormatPeakList(mSet, annParams, filtIso =F, filtAdducts = FALSE, missPercent = 1));
+More functions than standard OptiPipeline were detected !
+
+NOTE: Only 2nd, 4th, 8th, 9th, 11th, 12th functions in this plan and their direct defination on the argument will be included !
+
+Commands Origanization Finished!
+> res <- ExecutePlan(plan);
+This plan is being excuted !
+
+Working Directory: /data/glassfish/projects/metaboanalyst/guest4421321519057584299tmp
+Cache Directory: /data/glassfish/projects/metaboanalyst/guest4421321519057584299tmp/specTemp/
+
+Step 0/6: Scanning ROIs for parameters optimization...
+QC1.mzML
+QC2.mzML
+QC3.mzML
+Data Loading...
+Raw file import begin...
+Importing QC1.mzML: 0% |  20% |  40% |  60% |  80% |  100% |  Done!
+Import data: QC1.mzML finished!
+Importing QC2.mzML: 0% |  20% |  40% |  60% |  80% |  100% |  Done!
+Import data: QC2.mzML finished!
+Importing QC3.mzML: 0% |  20% |  40% |  60% |  80% |  100% |  Done!
+Import data: QC3.mzML finished!
+Data Loaded !
+Empty Scan detecting...
+No Empty scan found !
+Identifying regions of interest (ROI)...
+Identifying regions of potential contaminants........Done!
+80 potential contaminamts will not be used for parameters optimization !
+Going to the next step...
+MS data Preparing...
+MS Data ready !
+Identifying ROIs in m/z dimensions...
+Identifying ROIs in m/z dimensions Done !
+Identifying ROIs in RT dimensions...
+Identification on ROIs Finished!
+Optimization will be started soon...
+
+Step 1/6: Start to optimize parameters! 
+                
+This step may take a long time...
+DoE Optimization Starting Now... (2024-02-19 07:17:37)
+Evaluating Noise level...
+ppm is estimated as : 2.7
+Done!
+Preparing Parameters for optimization finished !
+Data Spliting Finished ! 
+Peak Preparing Begin...
+Peak Preparing Done !
+Round:1
+DoE Running Begin...
+Finished: 10 % | 20 % | 30 % | 40 % | 50 % | 60 % | 70 % | 80 % | 90 % | 100% |
+Round 1 Finished !
+Model Parsing...
+Gaussian peak ratio (%): 53.7
+Model Parsing Done !
+
+Round:2
+DoE Running Begin...
+Finished: 10 % | 20 % | 30 % | 40 % | 50 % | 60 % | 70 % | 80 % | 90 % | 100% |
+Round 2 Finished !
+Model Parsing...
+Gaussian peak ratio (%): 51
+Model Parsing Done !
+
+No Increase Stopping !
+Step 1/6: Parameters Optimization Finished ! (2024-02-19 07:53:07)
+
+Step 2/6: Start to import the spectrum! 
+This step will take a short time...
+Raw file import begin...
+PLASMA01.mzML import done!
+PLASMA02.mzML import done!
+PLASMA03.mzML import done!
+PLASMA05.mzML import done!
+PLASMA06.mzML import done!
+PLASMA07.mzML import done!
+QC1.mzML import done!
+QC2.mzML import done!
+QC3.mzML import done!
+QC4.mzML import done!
+QC5.mzML import done!
+QC6.mzML import done!
+SERUM01.mzML import done!
+SERUM02.mzML import done!
+SERUM03.mzML import done!
+SERUM04.mzML import done!
+SERUM05.mzML import done!
+SERUM06.mzML import done!
+WB01.mzML import done!
+WB02.mzML import done!
+WB03.mzML import done!
+WB04.mzML import done!
+WB05.mzML import done!
+WB06.mzML import done!
+Raw file initialized Successfully!
+To reduce memory usage BPIS and TICS plots will be created using only 10 samples per group.
+Plotting BPIS and TICS.
+Step 2/6: Successfully imported raw MS data! (2024-02-19 07:53:26) 
+Going to the next step...
+Parameters for centWave have been successfully parsed!
+4 CPU Threads will be used for peak profiling !
+
+Step 3/6: Started peak picking! This step will take some time...
+Detecting peaks in 5392 regions of interest of SERUM01.mzML ... OK: 1150 found.
+Detecting peaks in 5312 regions of interest of PLASMA01.mzML ... OK: 1311 found.
+Detecting peaks in 5534 regions of interest of WB01.mzML ... OK: 1312 found.
+Detecting peaks in 5417 regions of interest of QC1.mzML ... OK: 1293 found.
+Detecting peaks in 5527 regions of interest of SERUM02.mzML ... OK: 1144 found.
+Detecting peaks in 5302 regions of interest of PLASMA02.mzML ... OK: 1279 found.
+Detecting peaks in 5498 regions of interest of QC2.mzML ... OK: 1291 found.
+Detecting peaks in 6242 regions of interest of WB02.mzML ... OK: 1489 found.
+Detecting peaks in 5485 regions of interest of SERUM03.mzML ... OK: 1145 found.
+Detecting peaks in 5327 regions of interest of PLASMA03.mzML ... OK: 1307 found.
+Detecting peaks in 5456 regions of interest of QC3.mzML ... OK: 1328 found.
+Detecting peaks in 5649 regions of interest of WB03.mzML ... OK: 1271 found.
+Detecting peaks in 5529 regions of interest of SERUM04.mzML ... OK: 1159 found.
+Detecting peaks in 5148 regions of interest of PLASMA05.mzML ... OK: 1254 found.
+Detecting peaks in 5487 regions of interest of QC4.mzML ... OK: 1330 found.
+Detecting peaks in 5518 regions of interest of WB04.mzML ... OK: 1239 found.
+Detecting peaks in 5398 regions of interest of SERUM05.mzML ... OK: 1180 found.
+Detecting peaks in 5224 regions of interest of PLASMA06.mzML ... OK: 1300 found.
+Detecting peaks in 5454 regions of interest of QC5.mzML ... OK: 1391 found.
+Detecting peaks in 5407 regions of interest of WB05.mzML ... OK: 1220 found.
+Detecting peaks in 5353 regions of interest of SERUM06.mzML ... OK: 1114 found.
+Detecting peaks in 5269 regions of interest of PLASMA07.mzML ... OK: 1249 found.
+Detecting peaks in 5440 regions of interest of QC6.mzML ... OK: 1348 found.
+Detecting peaks in 5490 regions of interest of WB06.mzML ... OK: 1233 found.
+Step 3/6: Peak picking finished ! (2024-02-19 07:54:46)
+
+Step 4/6: Started peak alignment! This step is running...
+Total of 7413 slices detected for processing... Done ! 
+Going to the next step...
+Blank substraction will not be performed!
+Retention time correction is running.
+PeakGroup -- loess is used for retention time correction.....
+Performing retention time correction using  179  peak groups.
+Applying retention time adjustment to the identified chromatographic peaks ... Done !
+Total of 7413 slices detected for processing... Done ! 
+Going to the next step...
+Step 4/6: Peak alignment finished ! (2024-02-19 07:54:59)
+
+Step 5/6: Started peak filling! This step may take some time...
+Starting peak filling!
+Defining peak areas for filling-in....OK
+Start integrating peak areas from original files...
+Requesting 331 peaks from QC1.mzML ... got 253.
+Requesting 386 peaks from PLASMA01.mzML ... got 223.
+Requesting 384 peaks from WB01.mzML ... got 245.
+Requesting 459 peaks from SERUM01.mzML ... got 208.
+Requesting 320 peaks from QC2.mzML ... got 242.
+Requesting 391 peaks from PLASMA02.mzML ... got 226.
+Requesting 422 peaks from WB02.mzML ... got 239.
+Requesting 315 peaks from QC3.mzML ... got 238.
+Requesting 465 peaks from SERUM02.mzML ... got 229.
+Requesting 394 peaks from PLASMA03.mzML ... got 229.
+Requesting 394 peaks from WB03.mzML ... got 239.
+Requesting 326 peaks from QC4.mzML ... got 250.
+Requesting 462 peaks from SERUM03.mzML ... got 229.
+Requesting 386 peaks from PLASMA05.mzML ... got 235.
+Requesting 293 peaks from QC5.mzML ... got 227.
+Requesting 311 peaks from QC6.mzML ... got 232.
+Requesting 376 peaks from PLASMA06.mzML ... got 220.
+Requesting 418 peaks from WB04.mzML ... got 259.
+Requesting 466 peaks from SERUM04.mzML ... got 217.
+Requesting 403 peaks from WB05.mzML ... got 242.
+Requesting 377 peaks from PLASMA07.mzML ... got 216.
+Requesting 403 peaks from WB06.mzML ... got 248.
+Requesting 445 peaks from SERUM05.mzML ... got 215.
+Requesting 478 peaks from SERUM06.mzML ... got 232.
+Step 5/6: Peak filing finished ! (2024-02-19 07:55:22)
+Peak Profiling finished successfully !
+Begin to plotting figures...Done !
+
+Step 6/6: Starting Peak Annotation...
+Start grouping after retention time.
+Created 39 pseudospectra.
+Generating peak matrix...
+Run isotope peak annotation..
+Found isotopes:85
+Start grouping after correlation...
+Generating EIC's....
+Detecting  PLASMA01.mzML  ... 44 peaks found!
+Detecting  PLASMA02.mzML  ... 171 peaks found!
+Detecting  PLASMA03.mzML  ... 0 peaks found!
+Detecting  PLASMA05.mzML  ... 0 peaks found!
+Detecting  PLASMA06.mzML  ... 0 peaks found!
+Detecting  PLASMA07.mzML  ... 59 peaks found!
+Detecting  QC1.mzML  ... 1 peaks found!
+Detecting  QC2.mzML  ... 1 peaks found!
+Detecting  QC3.mzML  ... 115 peaks found!
+Detecting  QC4.mzML  ... 0 peaks found!
+Detecting  QC5.mzML  ... 58 peaks found!
+Detecting  QC6.mzML  ... 19 peaks found!
+Detecting  SERUM01.mzML  ... 262 peaks found!
+Detecting  SERUM02.mzML  ... 12 peaks found!
+Detecting  SERUM03.mzML  ... 292 peaks found!
+Detecting  SERUM04.mzML  ... 5 peaks found!
+Detecting  SERUM05.mzML  ... 45 peaks found!
+Detecting  SERUM06.mzML  ... 4 peaks found!
+Detecting  WB01.mzML  ... 6 peaks found!
+Detecting  WB02.mzML  ... 7 peaks found!
+Detecting  WB03.mzML  ... 33 peaks found!
+Detecting  WB04.mzML  ... 2 peaks found!
+Detecting  WB05.mzML  ... 117 peaks found!
+Detecting  WB06.mzML  ... 1 peaks found!
+Warning: Found NA peaks in selected sample.
+Calculating peak correlations in 39 Groups... 
+Calculating graph cross linking in 39 Groups...
+New number of ps-groups:  494
+mSet has now 494 groups, instead of 39 !
+Generating peak matrix for peak annotation!
+Polarity is set in annotaParam: positive
+Ruleset could not read from object! Recalculating...
+Calculating possible adducts in 494 Groups... 
+Performing mass matching to HMDB database...Done!
+Step 6/6: Successfully performed peak annotation! (2024-02-19 07:56:07) 
+Going to the final step...
+Attaching package: ‘igraph’
+
+The following object is masked from ‘package:MSnbase’:
+
+    normalize
+
+The following object is masked from ‘package:S4Vectors’:
+
+    union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    normalize, path, union
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning messages:
+1: In ImportRawMSData(path = "upload/", plotSettings = SetPlotParam(Plot = TRUE),  :
+  No metadata provided, all files in one sub-folder will be considered a group!
+2: Adjusted retention times had to be re-adjusted for some files to ensure them being in the same order than the raw retention times. A call to 'dropAdjustedRtime' might thus fail to restore retention times of chromatographic peaks to their original values. Eventually consider to increase the value of the 'span' parameter. 
+3: ggrepel: 1 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+> Export.Annotation(res[['mSet']]);
+> Export.PeakTable(res[['mSet']]);
+Done!
+
+Everything for MS1 spectra has been finished successfully ! (2024-02-19 07:56:31)
+> Export.PeakSummary(res[['mSet']])
+> 
+> 
+> 
+
+R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> library(OptiLCMS);
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: BiocParallel
+Loading required package: MSnbase
+Loading required package: mzR
+Loading required package: Rcpp
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: ProtGenerics
+
+Attaching package: ‘ProtGenerics’
+
+The following object is masked from ‘package:stats’:
+
+    smooth
+
+
+This is MSnbase version 2.24.2 
+  Visit https://lgatto.github.io/MSnbase/ to get started.
+
+
+Attaching package: ‘MSnbase’
+
+The following object is masked from ‘package:base’:
+
+    trimws
+
+OptiLCMS 1.1.0 initialized Successfully !
+
+> metaboanalyst_env <- new.env();
+> setwd('/data/glassfish/projects/metaboanalyst/guest4421321519057584299tmp');
+> load('mSet.rda');
+> ft <- mSet@peakAnnotation[['camera_output']][,c(2,3,5,6)];
+> idx <- OptiLCMS:::generatePvals_SigFeatures(mSet@dataSet);
+Loading required package: memoise
+[1] "Performing fast univariate tests ...."
+> if(length(idx)>0){ft<- ft[idx,]};
+> cat('There are total of ', nrow(ft), ' target MS1 features included for MS2 data processing!');
+There are total of  1009  target MS1 features included for MS2 data processing!> OptiLCMS:::MessageOutput(mes = paste0('Step 7/12: Starting importing MS/MS data... 
++ '),ecol = '',progress = 104);
+Step 7/12: Starting importing MS/MS data... 
+> mSet <- PerformMSnImport(filesPath = c(list.files('upload/MS2',
++                                                   pattern = '.mzML|.mzXML|.cdf',
++                                                   full.names = T, recursive = T)), targetFeatures = as.matrix(ft), acquisitionMode = 'DDA');
+Importing raw MS data .. done.
+> OptiLCMS:::MessageOutput(
++       mes = paste0('Step 7/12: MS/MS data imported completely! 
++ 
++ '),
++       ecol = '',
++       progress = 110
++     );
+Step 7/12: MS/MS data imported completely! 
+
+> mSet <- PerformDDADeconvolution(mSet,
++                                     ppm1 = 5.0, ppm2 = 10.0, sn = 12, filtering = 200.0, window_size = 1.5, intensity_thresh = 100000.0, database_path = '/home/glassfish/sqlite/MS2ID_Complete_v09102023.sqlite',
++                                     ncores = 4L, decoOn = TRUE, useEntropy = FALSE);
+Loading required package: parallel
+Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+91 MS1 scans and 903 MS2 scans have been included.
+35 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+The isolation window of DDA acquisition is 1.5
+Inclusion intensity threshold: 100000
+..........
+We found 14    clean feature groups in thread - 1 from file: QCDDA_SCAN1_01.mzML
+We found 21 chimeric feature groups in thread - 1 from file: QCDDA_SCAN1_01.mzML
+Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+229 MS1 scans and 81 MS2 scans have been included.
+0 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+No convoluted MS2 peaks found, skipped deconvolution
+..........
+We found 16    clean feature groups in thread - 15 from file: QCDDA_SCAN2_02.mzML
+We found 1 chimeric feature groups in thread - 15 from file: QCDDA_SCAN2_02.mzML
+...........
+We found 2    clean feature groups in thread - 16 from file: QCDDA_SCAN2_02.mzML
+We found 4 chimeric feature groups in thread - 16 from file: QCDDA_SCAN2_02.mzML
+....Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+242 MS1 scans and 8 MS2 scans have been included.
+0 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+No convoluted MS2 peaks found, skipped deconvolution
+Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+229 MS1 scans and 78 MS2 scans have been included.
+0 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+No convoluted MS2 peaks found, skipped deconvolution
+..........
+We found 15    clean feature groups in thread - 11 from file: QCDDA_SCAN2_01.mzML
+We found 6 chimeric feature groups in thread - 11 from file: QCDDA_SCAN2_01.mzML
+................
+We found 6    clean feature groups in thread - 12 from file: QCDDA_SCAN2_01.mzML
+We found 1 chimeric feature groups in thread - 12 from file: QCDDA_SCAN2_01.mzML
+..........
+We found 1    clean feature groups in thread - 20 from file: QCDDA_SCAN3_01.mzML
+We found 0 chimeric feature groups in thread - 20 from file: QCDDA_SCAN3_01.mzML
+Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+243 MS1 scans and 6 MS2 scans have been included.
+0 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+No convoluted MS2 peaks found, skipped deconvolution
+..........
+We found 1    clean feature groups in thread - 24 from file: QCDDA_SCAN3_02.mzML
+We found 0 chimeric feature groups in thread - 24 from file: QCDDA_SCAN3_02.mzML
+...............................
+We found 5    clean feature groups in thread - 2 from file: QCDDA_SCAN1_01.mzML
+We found 13 chimeric feature groups in thread - 2 from file: QCDDA_SCAN1_01.mzML
+.............Running into PerformDDA_main <----==== 
+Arguments configuration done!
+PerformDDAProcess starting...
+A total of 253 MS target peaks have been formatted.
+91 MS1 scans and 902 MS2 scans have been included.
+37 MS/MS features groups have been detected.
+Deconvolution is going to be executed .. 
+The isolation window of DDA acquisition is 1.5
+Inclusion intensity threshold: 100000
+..........
+We found 13    clean feature groups in thread - 5 from file: QCDDA_SCAN1_02.mzML
+We found 24 chimeric feature groups in thread - 5 from file: QCDDA_SCAN1_02.mzML
+..................................
+We found 5    clean feature groups in thread - 6 from file: QCDDA_SCAN1_02.mzML
+We found 15 chimeric feature groups in thread - 6 from file: QCDDA_SCAN1_02.mzML
+
+Deconvolution executed successfully!> OptiLCMS:::MessageOutput(mes = paste0('Step 8/12: MS/MS data deconvolution completed ! 
++ 
++ '),ecol = '',progress = 140);
+Step 8/12: MS/MS data deconvolution completed ! 
+
+> ...............OptiLCMS:::MessageOutput(mes = paste0('Step 9/12: MS/MS spectra consensus is starting .. 
++ '),ecol = '',progress = 145);
+Step 9/12: MS/MS spectra consensus is starting .. 
+> mSet <- PerformSpectrumConsenus (mSet, ppm2 = 10.0, concensus_fraction = 0.2, database_path = '', use_rt = FALSE,
++                                      user_dbCorrection = FALSE);
+> OptiLCMS:::MessageOutput(mes = paste0('Step 9/12: MS/MS spectra consensus finished! 
++ 
++ '),ecol = '',progress = 150);
+Step 9/12: MS/MS spectra consensus finished! 
+
+> OptiLCMS:::MessageOutput(mes = paste0('Step 10/12: MS/MS spectra database searching is starting ...
++  this step may take some time.. 
++ 
++ '),ecol = '',progress = 150);
+Step 10/12: MS/MS spectra database searching is starting ...
+ this step may take some time.. 
+
+> mSet <- PerformDBSearchingBatch (mSet,
++                                      ppm1 = 5.0,
++                                      ppm2 = 10.0,
++                                      rt_tol = 5, 
++                                      database_path = '/home/glassfish/sqlite/MS2ID_Complete_v09102023.sqlite', 
++                                      use_rt = FALSE, enableNL = FALSE, ncores = 4L, useEntropy = FALSE, 
++                                      databaseOptions =c('hmdb_exp'));
+==== Database searching against MS2ID_Complete_v09102023.sqlite started ====
+.
+============ Searching finished successfully! ============> OptiLCMS:::MessageOutput(mes = paste0('Step 10/12: MS/MS database searching completed! 
++ 
++ '),ecol = '',progress = 180);
+Step 10/12: MS/MS database searching completed! 
+
+......................> OptiLCMS:::MessageOutput(mes = paste0('Step 11/12: MS/MS data processing result exporting.. 
++ '),ecol = '',progress = 190);
+Step 11/12: MS/MS data processing result exporting.. 
+.......................> mSet <- PerformResultsExport (mSet, type = 0L,
++                                   topN = 10L, ncores = 4L);
+======= Converting started. See progress below ======= 
+..............................................
+============ Exporting finished successfully! ============> OptiLCMS:::MessageOutput(mes = paste0('Step 11/12: MS/MS data processing result exported! 
++ 
++ '),ecol = '',progress = 190);
+Step 11/12: MS/MS data processing result exported! 
+
+> dtx <- FormatMSnAnnotation(mSet, 5L, F);
+> write.csv(dtx, file = 'compound_msn_results.csv', row.names = F, col.names = F);
+Warning message:
+In write.csv(dtx, file = "compound_msn_results.csv", row.names = F,  :
+  attempt to set 'col.names' ignored
+> write.table(dtx, file = 'compound_msn_results.tsv', row.names = F, quote = FALSE, sep = '\t');
+> qs::qsave(mSet, file = 'msn_mset_result.qs');
+> OptiLCMS:::MessageOutput(mes = paste0('Step 12/12: MS/MS data processing finished! We are finalizing the job! 
++ '),ecol = '',progress = 198);
+Step 12/12: MS/MS data processing finished! We are finalizing the job! 
+> OptiLCMS:::jobFinished()
+<b>Everything of this LC-MS/MS dataset has been completed successfully! </b>
+
+> 
+> 
+> 
