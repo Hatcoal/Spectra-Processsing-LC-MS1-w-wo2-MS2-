@@ -1,0 +1,797 @@
+{
+	"x" : {
+		"data" : [
+			{
+				"x" : [
+					52.18974,
+					52.18974,
+					null,
+					53.03941,
+					53.03941,
+					null,
+					56.0501,
+					56.0501,
+					null,
+					56.96313,
+					56.96313,
+					null,
+					56.96552,
+					56.96552,
+					null,
+					57.03421,
+					57.03421,
+					null,
+					58.50525,
+					58.50525,
+					null,
+					67.42288,
+					67.42288,
+					null,
+					67.5106,
+					67.5106,
+					null,
+					71.04971,
+					71.04971,
+					null,
+					71.061,
+					71.061,
+					null,
+					76.51577,
+					76.51577,
+					null,
+					77.93456,
+					77.93456,
+					null,
+					77.99899,
+					77.99899,
+					null,
+					79.01839,
+					79.01839,
+					null,
+					79.05505,
+					79.05505,
+					null,
+					80.97412,
+					80.97412,
+					null,
+					87.00454,
+					87.00454,
+					null,
+					97.00799,
+					97.00799,
+					null,
+					98.98461,
+					98.98461,
+					null,
+					99.00218,
+					99.00218,
+					null,
+					99.04456,
+					99.04456,
+					null,
+					99.05566,
+					99.05566,
+					null,
+					99.09205,
+					99.09205,
+					null,
+					100.0992,
+					100.0992,
+					null,
+					113.9636,
+					113.9636,
+					null,
+					116.9863,
+					116.9863,
+					null,
+					116.995,
+					116.995
+				],
+				"y" : [
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					100,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1,
+					null,
+					0,
+					1
+				],
+				"text" : [
+					"mz:  52.18974<br />mz:  52.18974<br />Relative Intensity:   1",
+					"mz:  52.18974<br />mz:  52.18974<br />Relative Intensity:   1",
+					null,
+					"mz:  53.03941<br />mz:  53.03941<br />Relative Intensity:   1",
+					"mz:  53.03941<br />mz:  53.03941<br />Relative Intensity:   1",
+					null,
+					"mz:  56.05010<br />mz:  56.05010<br />Relative Intensity:   1",
+					"mz:  56.05010<br />mz:  56.05010<br />Relative Intensity:   1",
+					null,
+					"mz:  56.96313<br />mz:  56.96313<br />Relative Intensity:   1",
+					"mz:  56.96313<br />mz:  56.96313<br />Relative Intensity:   1",
+					null,
+					"mz:  56.96552<br />mz:  56.96552<br />Relative Intensity:   1",
+					"mz:  56.96552<br />mz:  56.96552<br />Relative Intensity:   1",
+					null,
+					"mz:  57.03421<br />mz:  57.03421<br />Relative Intensity:   1",
+					"mz:  57.03421<br />mz:  57.03421<br />Relative Intensity:   1",
+					null,
+					"mz:  58.50525<br />mz:  58.50525<br />Relative Intensity:   1",
+					"mz:  58.50525<br />mz:  58.50525<br />Relative Intensity:   1",
+					null,
+					"mz:  67.42288<br />mz:  67.42288<br />Relative Intensity:   1",
+					"mz:  67.42288<br />mz:  67.42288<br />Relative Intensity:   1",
+					null,
+					"mz:  67.51060<br />mz:  67.51060<br />Relative Intensity:   1",
+					"mz:  67.51060<br />mz:  67.51060<br />Relative Intensity:   1",
+					null,
+					"mz:  71.04971<br />mz:  71.04971<br />Relative Intensity:   1",
+					"mz:  71.04971<br />mz:  71.04971<br />Relative Intensity:   1",
+					null,
+					"mz:  71.06100<br />mz:  71.06100<br />Relative Intensity:   1",
+					"mz:  71.06100<br />mz:  71.06100<br />Relative Intensity:   1",
+					null,
+					"mz:  76.51577<br />mz:  76.51577<br />Relative Intensity:   1",
+					"mz:  76.51577<br />mz:  76.51577<br />Relative Intensity:   1",
+					null,
+					"mz:  77.93456<br />mz:  77.93456<br />Relative Intensity:   1",
+					"mz:  77.93456<br />mz:  77.93456<br />Relative Intensity:   1",
+					null,
+					"mz:  77.99899<br />mz:  77.99899<br />Relative Intensity:   1",
+					"mz:  77.99899<br />mz:  77.99899<br />Relative Intensity:   1",
+					null,
+					"mz:  79.01839<br />mz:  79.01839<br />Relative Intensity:   1",
+					"mz:  79.01839<br />mz:  79.01839<br />Relative Intensity:   1",
+					null,
+					"mz:  79.05505<br />mz:  79.05505<br />Relative Intensity:   1",
+					"mz:  79.05505<br />mz:  79.05505<br />Relative Intensity:   1",
+					null,
+					"mz:  80.97412<br />mz:  80.97412<br />Relative Intensity:   1",
+					"mz:  80.97412<br />mz:  80.97412<br />Relative Intensity:   1",
+					null,
+					"mz:  87.00454<br />mz:  87.00454<br />Relative Intensity:   1",
+					"mz:  87.00454<br />mz:  87.00454<br />Relative Intensity:   1",
+					null,
+					"mz:  97.00799<br />mz:  97.00799<br />Relative Intensity:   1",
+					"mz:  97.00799<br />mz:  97.00799<br />Relative Intensity:   1",
+					null,
+					"mz:  98.98461<br />mz:  98.98461<br />Relative Intensity: 100",
+					"mz:  98.98461<br />mz:  98.98461<br />Relative Intensity: 100",
+					null,
+					"mz:  99.00218<br />mz:  99.00218<br />Relative Intensity:   1",
+					"mz:  99.00218<br />mz:  99.00218<br />Relative Intensity:   1",
+					null,
+					"mz:  99.04456<br />mz:  99.04456<br />Relative Intensity:   1",
+					"mz:  99.04456<br />mz:  99.04456<br />Relative Intensity:   1",
+					null,
+					"mz:  99.05566<br />mz:  99.05566<br />Relative Intensity:   1",
+					"mz:  99.05566<br />mz:  99.05566<br />Relative Intensity:   1",
+					null,
+					"mz:  99.09205<br />mz:  99.09205<br />Relative Intensity:   1",
+					"mz:  99.09205<br />mz:  99.09205<br />Relative Intensity:   1",
+					null,
+					"mz: 100.09917<br />Relative Intensity:   1",
+					"mz: 100.09917<br />Relative Intensity:   1",
+					null,
+					"mz: 113.96356<br />Relative Intensity:   1",
+					"mz: 113.96356<br />Relative Intensity:   1",
+					null,
+					"mz: 116.98628<br />Relative Intensity:   1",
+					"mz: 116.98628<br />Relative Intensity:   1",
+					null,
+					"mz: 116.99496<br />Relative Intensity:   1",
+					"mz: 116.99496<br />Relative Intensity:   1"
+				],
+				"type" : "scatter",
+				"mode" : "lines",
+				"line" : {
+					"width" : 1.889764,
+					"color" : "rgba(0,0,255,1)",
+					"dash" : "solid"
+				},
+				"hoveron" : "points",
+				"showlegend" : false,
+				"xaxis" : "x",
+				"yaxis" : "y",
+				"hoverinfo" : "text",
+				"name" : ""
+			},
+			{
+				"x" : [
+					80.9736,
+					80.9736,
+					null,
+					98.9838,
+					98.9838
+				],
+				"y" : [
+					0,
+					-5,
+					null,
+					0,
+					-100
+				],
+				"text" : [
+					"mz: 80.9736<br />Relative Intensity:   5<br />Fragment Formula: H2O3P",
+					"mz: 80.9736<br />Relative Intensity:   5<br />Fragment Formula: H2O3P",
+					null,
+					"mz: 98.9838<br />Relative Intensity: 100<br />Fragment Formula: Unknown",
+					"mz: 98.9838<br />Relative Intensity: 100<br />Fragment Formula: Unknown"
+				],
+				"type" : "scatter",
+				"mode" : "lines",
+				"line" : {
+					"width" : 1.889764,
+					"color" : "rgba(255,0,0,1)",
+					"dash" : "solid"
+				},
+				"hoveron" : "points",
+				"showlegend" : false,
+				"xaxis" : "x",
+				"yaxis" : "y",
+				"hoverinfo" : "text",
+				"name" : ""
+			},
+			{
+				"x" : [
+					52.18974,
+					53.03941,
+					56.0501,
+					56.96313,
+					56.96552,
+					57.03421,
+					58.50525,
+					67.42288,
+					67.5106,
+					71.04971,
+					71.061,
+					76.51577,
+					77.93456,
+					77.99899,
+					79.01839,
+					79.05505,
+					80.97412,
+					87.00454,
+					97.00799,
+					98.98461,
+					99.00218,
+					99.04456,
+					99.05566,
+					99.09205,
+					100.0992,
+					113.9636,
+					116.9863,
+					116.995
+				],
+				"y" : [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					6,
+					null,
+					null,
+					105,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"text" : [
+					"<b>Matched Fragment: </b><br />mz:  52.18974",
+					"<b>Matched Fragment: </b><br />mz:  53.03941",
+					"<b>Matched Fragment: </b><br />mz:  56.05010",
+					"<b>Matched Fragment: </b><br />mz:  56.96313",
+					"<b>Matched Fragment: </b><br />mz:  56.96552",
+					"<b>Matched Fragment: </b><br />mz:  57.03421",
+					"<b>Matched Fragment: </b><br />mz:  58.50525",
+					"<b>Matched Fragment: </b><br />mz:  67.42288",
+					"<b>Matched Fragment: </b><br />mz:  67.51060",
+					"<b>Matched Fragment: </b><br />mz:  71.04971",
+					"<b>Matched Fragment: </b><br />mz:  71.06100",
+					"<b>Matched Fragment: </b><br />mz:  76.51577",
+					"<b>Matched Fragment: </b><br />mz:  77.93456",
+					"<b>Matched Fragment: </b><br />mz:  77.99899",
+					"<b>Matched Fragment: </b><br />mz:  79.01839",
+					"<b>Matched Fragment: </b><br />mz:  79.05505",
+					"<b>Matched Fragment: </b><br />mz:  80.97412",
+					"<b>Matched Fragment: </b><br />mz:  87.00454",
+					"<b>Matched Fragment: </b><br />mz:  97.00799",
+					"<b>Matched Fragment: </b><br />mz:  98.98461",
+					"<b>Matched Fragment: </b><br />mz:  99.00218",
+					"<b>Matched Fragment: </b><br />mz:  99.04456",
+					"<b>Matched Fragment: </b><br />mz:  99.05566",
+					"<b>Matched Fragment: </b><br />mz:  99.09205",
+					"<b>Matched Fragment: </b><br />mz: 100.09917",
+					"<b>Matched Fragment: </b><br />mz: 113.96356",
+					"<b>Matched Fragment: </b><br />mz: 116.98628",
+					"<b>Matched Fragment: </b><br />mz: 116.99496"
+				],
+				"type" : "scatter",
+				"mode" : "markers",
+				"marker" : {
+					"autocolorscale" : false,
+					"color" : "rgba(255,0,0,1)",
+					"opacity" : 1,
+					"size" : 3.779528,
+					"symbol" : "diamond",
+					"line" : {
+						"width" : 1.889764,
+						"color" : "rgba(255,0,0,1)"
+					}
+				},
+				"hoveron" : "points",
+				"showlegend" : false,
+				"xaxis" : "x",
+				"yaxis" : "y",
+				"hoverinfo" : "text",
+				"name" : ""
+			}
+		],
+		"layout" : {
+			"margin" : {
+				"t" : 49.65158,
+				"r" : 7.305936,
+				"b" : 53.24478,
+				"l" : 69.40639
+			},
+			"font" : {
+				"color" : "rgba(0,0,0,1)",
+				"family" : "serif",
+				"size" : 14.61187
+			},
+			"title" : {
+				"text" : "98.9847__53.28",
+				"font" : {
+					"color" : "rgba(0,0,0,1)",
+					"family" : "serif",
+					"size" : 16
+				},
+				"x" : 0,
+				"xref" : "paper"
+			},
+			"xaxis" : {
+				"type" : "linear",
+				"autorange" : false,
+				"range" : [
+					48.94947,
+					120.2352
+				],
+				"tickmode" : "array",
+				"ticktext" : [
+					"60",
+					"80",
+					"100",
+					"120"
+				],
+				"tickvals" : [
+					60,
+					80,
+					100,
+					120
+				],
+				"categoryorder" : "array",
+				"categoryarray" : [
+					"60",
+					"80",
+					"100",
+					"120"
+				],
+				"nticks" : null,
+				"ticks" : "",
+				"tickcolor" : null,
+				"ticklen" : 3.652968,
+				"tickwidth" : 0,
+				"showticklabels" : true,
+				"tickfont" : {
+					"color" : "rgba(77,77,77,1)",
+					"family" : "serif",
+					"size" : 18.59693
+				},
+				"tickangle" : -0,
+				"showline" : false,
+				"linecolor" : null,
+				"linewidth" : 0,
+				"showgrid" : true,
+				"domain" : [
+					0,
+					1
+				],
+				"gridcolor" : "rgba(235,235,235,1)",
+				"gridwidth" : 0.664176,
+				"zeroline" : false,
+				"anchor" : "y",
+				"title" : {
+					"text" : "m/z",
+					"font" : {
+						"color" : "rgba(0,0,0,1)",
+						"family" : "serif",
+						"size" : 16
+					}
+				},
+				"hoverformat" : ".2f"
+			},
+			"yaxis" : {
+				"type" : "linear",
+				"autorange" : false,
+				"range" : [
+					-115.5,
+					115.5
+				],
+				"tickmode" : "array",
+				"ticktext" : [
+					"-100",
+					"-50",
+					"0",
+					"50",
+					"100"
+				],
+				"tickvals" : [
+					-100,
+					-50,
+					0,
+					50,
+					100
+				],
+				"categoryorder" : "array",
+				"categoryarray" : [
+					"-100",
+					"-50",
+					"0",
+					"50",
+					"100"
+				],
+				"nticks" : null,
+				"ticks" : "",
+				"tickcolor" : null,
+				"ticklen" : 3.652968,
+				"tickwidth" : 0,
+				"showticklabels" : true,
+				"tickfont" : {
+					"color" : "rgba(77,77,77,1)",
+					"family" : "serif",
+					"size" : 18.59693
+				},
+				"tickangle" : -0,
+				"showline" : false,
+				"linecolor" : null,
+				"linewidth" : 0,
+				"showgrid" : true,
+				"domain" : [
+					0,
+					1
+				],
+				"gridcolor" : "rgba(235,235,235,1)",
+				"gridwidth" : 0.664176,
+				"zeroline" : false,
+				"anchor" : "x",
+				"title" : {
+					"text" : "Relative Intensity (%)",
+					"font" : {
+						"color" : "rgba(0,0,0,1)",
+						"family" : "serif",
+						"size" : 16
+					}
+				},
+				"hoverformat" : ".2f"
+			},
+			"shapes" : [
+				{
+					"type" : "rect",
+					"fillcolor" : null,
+					"line" : {
+						"color" : null,
+						"width" : 0,
+						"linetype" : []
+					},
+					"yref" : "paper",
+					"xref" : "paper",
+					"x0" : 0,
+					"x1" : 1,
+					"y0" : 0,
+					"y1" : 1
+				}
+			],
+			"showlegend" : false,
+			"legend" : {
+				"bgcolor" : null,
+				"bordercolor" : null,
+				"borderwidth" : 0,
+				"font" : {
+					"color" : "rgba(0,0,0,1)",
+					"family" : "serif",
+					"size" : 11.6895
+				}
+			},
+			"hovermode" : "closest",
+			"barmode" : "relative",
+			"width" : 850,
+			"height" : 425
+		},
+		"config" : {
+			"doubleClick" : "reset",
+			"modeBarButtonsToAdd" : [
+				"hoverclosest",
+				"hovercompare"
+			],
+			"showSendToCloud" : false
+		},
+		"source" : "A",
+		"attrs" : {
+			"20550e618ebac5" : {
+				"x" : [
+					"~",
+					[
+						"~",
+						"mz"
+					]
+				],
+				"y" : [
+					"~",
+					0
+				],
+				"xend" : [
+					"~",
+					[
+						"~",
+						"mz"
+					]
+				],
+				"yend" : [
+					"~",
+					[
+						"~",
+						"normalized"
+					]
+				],
+				"type" : "scatter"
+			},
+			"20550e535fd235" : {
+				"x" : [
+					"~",
+					[
+						"~",
+						"mz"
+					]
+				],
+				"y" : [
+					"~",
+					0
+				],
+				"xend" : [
+					"~",
+					[
+						"~",
+						"mz"
+					]
+				],
+				"yend" : [
+					"~",
+					[
+						"~",
+						[
+							"-",
+							"normalized"
+						]
+					]
+				]
+			},
+			"20550e672b7d39" : {
+				"x" : [
+					"~",
+					[
+						"~",
+						"mz"
+					]
+				],
+				"y" : [
+					"~",
+					[
+						"~",
+						"star_intensity"
+					]
+				]
+			}
+		},
+		"cur_data" : "20550e618ebac5",
+		"visdat" : {
+			"20550e618ebac5" : null,
+			"20550e535fd235" : null,
+			"20550e672b7d39" : null
+		}
+	},
+	"width" : 850,
+	"height" : 425,
+	"sizingPolicy" : {
+		"defaultWidth" : "100%",
+		"defaultHeight" : 400,
+		"padding" : 0,
+		"fill" : null,
+		"viewer" : {
+			"defaultWidth" : null,
+			"defaultHeight" : null,
+			"padding" : null,
+			"fill" : true,
+			"suppress" : false,
+			"paneHeight" : null
+		},
+		"browser" : {
+			"defaultWidth" : null,
+			"defaultHeight" : null,
+			"padding" : null,
+			"fill" : true,
+			"external" : false
+		},
+		"knitr" : {
+			"defaultWidth" : null,
+			"defaultHeight" : null,
+			"figure" : true
+		}
+	},
+	"dependencies" : [
+		{
+			"name" : "typedarray",
+			"version" : "0.1",
+			"src" : {
+				"file" : "htmlwidgets/lib/typedarray"
+			},
+			"meta" : null,
+			"script" : "typedarray.min.js",
+			"stylesheet" : null,
+			"head" : null,
+			"attachment" : null,
+			"package" : "plotly",
+			"all_files" : false
+		},
+		{
+			"name" : "jquery",
+			"version" : "3.5.1",
+			"src" : {
+				"file" : "lib/jquery"
+			},
+			"meta" : null,
+			"script" : "jquery.min.js",
+			"stylesheet" : null,
+			"head" : null,
+			"attachment" : null,
+			"package" : "crosstalk",
+			"all_files" : true
+		},
+		{
+			"name" : "crosstalk",
+			"version" : "1.2.1",
+			"src" : {
+				"file" : "www"
+			},
+			"meta" : null,
+			"script" : "js/crosstalk.min.js",
+			"stylesheet" : "css/crosstalk.min.css",
+			"head" : null,
+			"attachment" : null,
+			"package" : "crosstalk",
+			"all_files" : true
+		},
+		{
+			"name" : "plotly-htmlwidgets-css",
+			"version" : "2.11.1",
+			"src" : {
+				"file" : "htmlwidgets/lib/plotlyjs"
+			},
+			"meta" : null,
+			"script" : null,
+			"stylesheet" : "plotly-htmlwidgets.css",
+			"head" : null,
+			"attachment" : null,
+			"package" : "plotly",
+			"all_files" : false
+		},
+		{
+			"name" : "plotly-main",
+			"version" : "2.11.1",
+			"src" : {
+				"file" : "htmlwidgets/lib/plotlyjs"
+			},
+			"meta" : null,
+			"script" : "plotly-latest.min.js",
+			"stylesheet" : null,
+			"head" : null,
+			"attachment" : null,
+			"package" : "plotly",
+			"all_files" : false
+		}
+	],
+	"elementId" : null,
+	"preRenderHook" : null,
+	"jsHooks" : []
+}
